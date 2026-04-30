@@ -383,6 +383,39 @@
       color: var(--muted);
     }
 
+    .quote-callout {
+      margin-top: 30px;
+      background: #F8FCFD;
+      border: 1px solid var(--border);
+      border-right: 8px solid var(--accent);
+      border-radius: 22px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .quote-callout p {
+      margin: 0;
+      color: var(--dark);
+      font-weight: 800;
+    }
+
+    .inline-quote-link {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: var(--black);
+      border-radius: 999px;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
     .dark-section {
       background: var(--primary);
       color: var(--white);
@@ -681,11 +714,6 @@
       color: var(--white);
     }
 
-    .float-btn.quote {
-      background: var(--white);
-      color: var(--primary);
-    }
-
     @media (prefers-reduced-motion: no-preference) {
       .intro-card,
       .highlight,
@@ -780,6 +808,15 @@
       }
 
       .btn {
+        width: 100%;
+      }
+
+      .quote-callout {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .inline-quote-link {
         width: 100%;
       }
 
@@ -880,6 +917,11 @@
               <h3>התאמה אישית</h3>
               <p>ניתן לתכנן צבעים, חלוקת אזורים, סימונים ודוגמאות בהתאם למוסד, לגיל המשתמשים ולאופי הפעילות.</p>
             </div>
+          </div>
+
+          <div class="quote-callout" aria-label="יצירת קשר להצעת מחיר">
+            <p>מעוניינים לבדוק התאמה לפרויקט שלכם?</p>
+            <a class="inline-quote-link" href="tel:0543024203" title="חיוג להצעת מחיר">להצעות מחיר חייגו 054-302-4203</a>
           </div>
         </article>
       </div>
@@ -1071,7 +1113,7 @@
         <h3 id="footer-contact-title">יצירת קשר</h3>
         <p>כתובת: ג'מילי 4, פתח תקווה</p>
         <a class="footer-phone" href="tel:0546813878" title="חיוג לפולימור הנדסה">054-6813878</a>
-        <a class="footer-phone secondary-phone" href="tel:0543024203" title="חיוג ללאה במשרד לקבלת הצעת מחיר">להצעת מחיר חייגו ללאה 054-302-4203</a>
+        <a class="footer-phone secondary-phone" href="tel:0543024203" title="חיוג להצעת מחיר">להצעת מחיר 054-302-4203</a>
       </section>
 
       <section aria-labelledby="footer-links-title">
@@ -1115,7 +1157,6 @@
 
   <div class="floating-actions" aria-label="כפתורי יצירת קשר צפים">
     <a class="float-btn" href="tel:0546813878" title="חיוג מהיר לפולימור הנדסה" aria-label="חיוג מהיר לפולימור הנדסה">☎</a>
-    <a class="float-btn quote" href="tel:0543024203" title="חיוג ללאה במשרד לקבלת הצעת מחיר" aria-label="חיוג ללאה במשרד לקבלת הצעת מחיר">₪</a>
     <a class="float-btn secondary" href="#contact" title="מעבר לפרטי יצירת קשר" aria-label="מעבר לפרטי יצירת קשר">↧</a>
   </div>
 
