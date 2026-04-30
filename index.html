@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>משטחי גומי בטיחותיים | פולימור הנדסה</title>
+  <meta name="description" content="פולימור הנדסה מתמחה בתכנון, התקנה ותחזוקה של משטחי גומי בטיחותיים לגני ילדים, פארקים, בתי ספר ומגרשי ספורט.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#217F90">
+
+  <style>
+    :root {
+      --primary: #217F90;
+      --accent: #FBB340;
+      --dark: #102B33;
+      --light: #F6FAFB;
+      --white: #ffffff;
+      --black: #111111;
+      --muted: #4A5D63;
+      --border: rgba(33, 127, 144, 0.18);
+      --shadow: 0 18px 45px rgba(16, 43, 51, 0.14);
+      --radius: 28px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 19px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Assistant, Arial, sans-serif;
+      color: var(--black);
+      background: var(--light);
+      line-height: 1.75;
+      font-size: 19px;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    a:focus,
+    button:focus {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -80px;
+      right: 16px;
+      background: var(--accent);
+      color: var(--black);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      z-index: 10000;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      color: var(--primary);
+      font-size: 1.05rem;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--primary), #165A66);
+      position: relative;
+      box-shadow: 0 8px 18px rgba(33,127,144,0.24);
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--accent);
+      top: 8px;
+      left: 8px;
+      box-shadow: 12px 14px 0 rgba(251, 179, 64, 0.72);
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .main-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 13px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 800;
+      border-radius: 999px;
+      transition: 0.25s ease;
+      font-size: 18px;
+    }
+
+    .main-nav a:hover {
+      background: rgba(33, 127, 144, 0.10);
+      color: var(--primary);
+    }
+
+    .burger {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      background: var(--primary);
+      border-radius: 14px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .burger span {
+      position: absolute;
+      right: 12px;
+      left: 12px;
+      height: 3px;
+      background: var(--white);
+      border-radius: 999px;
+      transition: 0.25s ease;
+    }
+
+    .burger span:nth-child(1) { top: 14px; }
+    .burger span:nth-child(2) { top: 22px; }
+    .burger span:nth-child(3) { top: 30px; }
+
+    .hero {
+      min-height: 620px;
+      position: relative;
+      color: var(--white);
+      background:
+        linear-gradient(120deg, rgba(16,43,51,0.86), rgba(33,127,144,0.70), rgba(16,43,51,0.44)),
+        url("מסלול_רקורטן_from_web_client.jpeg") center/cover no-repeat;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -110px -10%;
+      height: 220px;
+      background: var(--light);
+      transform: rotate(-3deg);
+      z-index: -1;
+    }
+
+    .hero-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 115px 20px 140px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(251,179,64,0.20);
+      border: 1px solid rgba(251,179,64,0.55);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-weight: 900;
+      margin-bottom: 22px;
+      font-size: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1, h2, h3 {
+      line-height: 1.22;
+      margin: 0 0 18px;
+      color: inherit;
+    }
+
+    h1 {
+      font-size: clamp(2.15rem, 5vw, 4.35rem);
+      max-width: 920px;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-text {
+      max-width: 780px;
+      font-size: 1.18rem;
+      margin: 0 0 32px;
+      color: rgba(255,255,255,0.96);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .btn {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: 0.25s ease;
+      border: 2px solid transparent;
+      font-size: 18px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--black);
+      box-shadow: 0 16px 30px rgba(251,179,64,0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 35px rgba(251,179,64,0.38);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.60);
+      color: var(--white);
+    }
+
+    .btn-secondary:hover {
+      background: var(--white);
+      color: var(--primary);
+    }
+
+    .section {
+      padding: 82px 20px;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .section-title {
+      color: var(--primary);
+      font-size: clamp(1.65rem, 3vw, 2.75rem);
+      max-width: 850px;
+    }
+
+    .section-lead {
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 0 0 34px;
+    }
+
+    .intro-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 46px);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .intro-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 100%;
+      background: linear-gradient(var(--primary), var(--accent));
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .highlight {
+      background: #F8FCFD;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 22px;
+      transition: 0.25s ease;
+    }
+
+    .highlight:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(16,43,51,0.08);
+    }
+
+    .icon-dot {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 16px;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .icon-dot::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary);
+      top: 13px;
+      right: 13px;
+    }
+
+    .highlight h3 {
+      color: var(--primary);
+      font-size: 1.16rem;
+    }
+
+    .highlight p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .dark-section {
+      background: var(--primary);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dark-section::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(251,179,64,0.16);
+      top: -160px;
+      left: -120px;
+    }
+
+    .dark-section .section-title,
+    .dark-section .section-lead {
+      color: var(--white);
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      position: relative;
+      z-index: 2;
+      margin-top: 30px;
+    }
+
+    .process-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 24px;
+      padding: 26px;
+      backdrop-filter: blur(10px);
+    }
+
+    .process-card strong {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: var(--accent);
+      color: var(--black);
+      margin-bottom: 16px;
+      font-weight: 900;
+    }
+
+    .process-card h3 {
+      color: var(--white);
+      font-size: 1.18rem;
+    }
+
+    .process-card p {
+      color: rgba(255,255,255,0.92);
+      margin: 0;
+    }
+
+    .image-strip {
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 34px;
+    }
+
+    .image-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--white);
+      position: relative;
+      min-height: 310px;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 310px;
+      object-fit: cover;
+    }
+
+    .image-caption {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      left: 18px;
+      background: rgba(16,43,51,0.78);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 18px;
+      padding: 14px 16px;
+      font-weight: 800;
+      backdrop-filter: blur(10px);
+    }
+
+    .uses-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .use-card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 34px rgba(16,43,51,0.07);
+    }
+
+    .use-card h3 {
+      color: var(--primary);
+      font-size: 1.25rem;
+    }
+
+    .use-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .standards-box {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 28px;
+      align-items: center;
+      background: var(--dark);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: clamp(26px, 4vw, 46px);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .standards-box h2 {
+      color: var(--accent);
+      font-size: clamp(1.55rem, 3vw, 2.45rem);
+    }
+
+    .standards-box p {
+      color: rgba(255,255,255,0.92);
+    }
+
+    .standards-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .badge {
+      background: rgba(251,179,64,0.16);
+      border: 1px solid rgba(251,179,64,0.45);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    details {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 18px 22px;
+      box-shadow: 0 10px 26px rgba(16,43,51,0.06);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    details p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .footer {
+      background: var(--dark);
+      color: var(--white);
+      padding: 58px 20px 28px;
+    }
+
+    .footer-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1fr 1fr;
+      gap: 26px;
+    }
+
+    .footer h2,
+    .footer h3 {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    .footer p,
+    .footer li {
+      color: rgba(255,255,255,0.88);
+      margin-top: 0;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer a {
+      color: var(--white);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+      font-weight: 800;
+    }
+
+    .footer-phone {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: var(--black) !important;
+      border-radius: 999px;
+      padding: 12px 18px;
+      text-decoration: none;
+      margin-top: 8px;
+      font-weight: 900;
+    }
+
+    .privacy {
+      max-width: var(--max);
+      margin: 32px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.82);
+      font-size: 18px;
+    }
+
+    .accessibility-note {
+      max-width: var(--max);
+      margin: 18px auto 0;
+      color: rgba(255,255,255,0.78);
+      font-size: 18px;
+    }
+
+    .floating-actions {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      z-index: 998;
+      display: grid;
+      gap: 10px;
+    }
+
+    .float-btn {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--black);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 14px 26px rgba(16,43,51,0.24);
+      font-size: 25px;
+      font-weight: 900;
+      border: 2px solid var(--white);
+    }
+
+    .float-btn.secondary {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .intro-card,
+      .highlight,
+      .process-card,
+      .use-card,
+      .standards-box {
+        animation: fadeUp 0.7s ease both;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    @media (max-width: 980px) {
+      .burger {
+        display: inline-flex;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: 74px;
+        right: 16px;
+        left: 16px;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        padding: 12px;
+        display: none;
+      }
+
+      .main-nav.is-open {
+        display: block;
+      }
+
+      .main-nav ul {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .main-nav a {
+        justify-content: flex-start;
+        padding: 12px 16px;
+      }
+
+      .highlight-grid,
+      .process,
+      .uses-grid,
+      .footer-grid,
+      .standards-box,
+      .image-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 92px 20px 120px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      html,
+      body {
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 62px 16px;
+      }
+
+      .header-inner {
+        padding: 12px 16px;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .floating-actions {
+        left: 12px;
+        bottom: 12px;
+      }
+
+      .float-btn {
+        width: 54px;
+        height: 54px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main" title="דלג לתוכן המרכזי">דלג לתוכן המרכזי</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="#top" title="חזרה לראש הדף">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>פולימור הנדסה</span>
+      </a>
+
+      <button class="burger" type="button" aria-label="פתיחת ניווט" aria-controls="primary-navigation" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="main-nav" id="primary-navigation" aria-label="ניווט מרכזי">
+        <ul>
+          <li><a href="#about" title="מעבר לאודות פולימור">אודות</a></li>
+          <li><a href="#advantages" title="מעבר ליתרונות משטחי הגומי">יתרונות</a></li>
+          <li><a href="#applications" title="מעבר לשימושים נפוצים">שימושים</a></li>
+          <li><a href="#standard" title="מעבר לבטיחות ותקינה">בטיחות ותקן</a></li>
+          <li><a href="#faq" title="מעבר לשאלות ותשובות">שאלות ותשובות</a></li>
+          <li><a href="#contact" title="מעבר לפרטי יצירת קשר">יצירת קשר</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="eyebrow">תכנון, התקנה ותחזוקה של רצפות בטיחות</p>
+        <h1 id="hero-title">משטחי גומי בטיחותיים שמחברים בין תקן, עמידות ונראות מקצועית</h1>
+        <p class="hero-text">
+          פולימור הנדסה מתמחה בביצוע רצפות גומי קפיציות למגרשי משחקים, גני ילדים, בתי ספר, פארקים, מתקני כושר ציבוריים, שבילים ומגרשי ספורט. החברה מביאה לשטח ניסיון רב, הבנה מקצועית של תשתיות, שימוש בחומרים מתקדמים וביצוע מוקפד שמתאים לשטח ציבורי, מוסדי ופרטי.
+        </p>
+        <div class="hero-actions" aria-label="קישורי פעולה מרכזיים">
+          <a class="btn btn-primary" href="#advantages" title="לקריאת היתרונות של משטחי גומי">למה לבחור במשטח גומי</a>
+          <a class="btn btn-secondary" href="#standard" title="לקריאת מידע על בטיחות ותקינה">בטיחות לפני הכול</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <article class="intro-card">
+          <h2 class="section-title" id="about-title">פולימור הנדסה – ניסיון מקצועי שמרגישים בשטח</h2>
+          <p>
+            פולי-מור הנדסה היא חברה ותיקה ועתירת מוניטין, בעלת ניסיון של למעלה מ-20 שנה בהתקנה ובתחזוקה של רצפות למגרשי משחקים, מגרשי ספורט ושבילים. לאורך השנים החברה ביצעה פרויקטים עבור לקוחות מגוונים מכל ענפי המשק, בהם חברות, עיריות, מועצות מקומיות, מתנ"סים, ועדי בתים ולקוחות פרטיים.
+          </p>
+          <p>
+            העבודה של פולימור מתחילה הרבה לפני שכבת הגומי הנראית לעין. בכל פרויקט נבחנים אופי השימוש, סוג התשתית, תנאי השטח, עומסי התנועה, רמת החשיפה לשמש ולגשם, צורכי התחזוקה והדרישות הבטיחותיות. זו הסיבה שבחירת קבלן לביצוע <a href="https://polimor.co.il/" title="מעבר לאתר פולימור בנושא משטחי גומי">משטחי גומי</a> אינה החלטה עיצובית בלבד, אלא החלטה הנדסית, בטיחותית ותפעולית.
+          </p>
+          <p>
+            במרחבים שבהם ילדים רצים, קופצים, משחקים ונופלים, איכות המשטח משפיעה ישירות על רמת הבטיחות ועל תחושת הביטחון של ההורים, הצוותים והרשות המקומית. במגרשי ספורט ובמסלולי רקורטן, איכות הביצוע משפיעה גם על נוחות הדריכה, רציפות התנועה, בלימת הזעזועים והעמידות לאורך זמן. פולימור מביאה לכל פרויקט שילוב בין ניסיון מעשי, צוות מיומן, חומרים איכותיים והיכרות עם צורכי השטח בישראל.
+          </p>
+
+          <div class="highlight-grid" id="advantages" aria-label="יתרונות מרכזיים">
+            <div class="highlight">
+              <div class="icon-dot" aria-hidden="true"></div>
+              <h3>בטיחות</h3>
+              <p>רצפת גומי איכותית מיועדת לסייע בבלימת נפילות, להפחית סיכוני החלקה וליצור סביבת פעילות בטוחה יותר.</p>
+            </div>
+            <div class="highlight">
+              <div class="icon-dot" aria-hidden="true"></div>
+              <h3>עמידות</h3>
+              <p>חומרים מתקדמים ושיטות יישום נכונות מסייעים לשמור על מראה, צבע ותפקוד גם בתנאי חוץ מאתגרים.</p>
+            </div>
+            <div class="highlight">
+              <div class="icon-dot" aria-hidden="true"></div>
+              <h3>מקצועיות</h3>
+              <p>צוות מיומן מלווה את העבודה משלב ההכנה והתשתית ועד תיקונים, תחזוקה והתאמה מלאה לצורכי המקום.</p>
+            </div>
+            <div class="highlight">
+              <div class="icon-dot" aria-hidden="true"></div>
+              <h3>התאמה אישית</h3>
+              <p>ניתן לתכנן צבעים, צורות ודוגמאות לפי אופי המתחם, קהל המשתמשים, המיתוג והשטח הקיים.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dark-section" aria-labelledby="work-title">
+      <div class="container">
+        <h2 class="section-title" id="work-title">איך נראה ביצוע מקצועי של משטח גומי?</h2>
+        <p class="section-lead">
+          משטח גומי מוצלח הוא תוצאה של תכנון נכון, הכנת שטח מדויקת ויישום מקצועי. כאשר מדלגים על אחד מהשלבים האלה, גם חומר טוב עלול להישחק מהר, להיראות פחות טוב או לתת מענה חלקי בלבד.
+        </p>
+
+        <div class="process" aria-label="שלבי עבודה מרכזיים">
+          <article class="process-card">
+            <strong aria-hidden="true">1</strong>
+            <h3>בדיקת השטח והתשתית</h3>
+            <p>
+              לפני היציקה נדרש להבין מה מצב השטח, האם יש שיפועים, ניקוזים, קצוות, תשתית קיימת או אזורים שדורשים הכנה מיוחדת. שלב זה קריטי ליציבות המשטח ולתוצאה הסופית.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <strong aria-hidden="true">2</strong>
+            <h3>בחירת עובי, צבע ומפרט</h3>
+            <p>
+              עובי המשטח, סוג הפתיתים, שילוב הצבעים ורמת הבלימה צריכים להתאים לשימוש בפועל: גן ילדים, חצר בית ספר, פארק, מסלול הליכה או מתחם ספורט.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <strong aria-hidden="true">3</strong>
+            <h3>יישום נקי ותחזוקה נכונה</h3>
+            <p>
+              יציקת גומי מקצועית יוצרת משטח רציף ונעים לשימוש. לאחר מכן, תחזוקה נכונה מסייעת לשמור על בטיחות, מראה ועמידות לאורך זמן.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="applications" aria-labelledby="applications-title">
+      <div class="container">
+        <h2 class="section-title" id="applications-title">משטחי גומי למוסדות, רשויות, פארקים וחצרות פעילות</h2>
+        <p class="section-lead">
+          לכל מרחב יש אופי שימוש אחר. חצר של גן ילדים אינה דומה למגרש ספורט, ופארק ציבורי אינו דומה למתחם כושר פתוח. לכן תכנון נכון של משטח גומי צריך להתחשב גם בבטיחות וגם בנראות, בתחזוקה, בתנועה היומית ובקהל המשתמשים.
+        </p>
+
+        <div class="uses-grid">
+          <article class="use-card">
+            <h3>גני ילדים ובתי ספר</h3>
+            <p>
+              בחצרות גני ילדים ובבתי ספר, המשטח נדרש להתמודד עם שימוש אינטנסיבי, תנועה רבה, משחק חופשי ופעילות יומיומית. משטח גומי איכותי מסייע ביצירת סביבה רכה יותר, נעימה יותר ובטוחה יותר לפעילות ילדים.
+            </p>
+          </article>
+
+          <article class="use-card">
+            <h3>גינות ציבוריות ופארקים</h3>
+            <p>
+              במרחבים ציבוריים נדרש פתרון חזק, עמיד וקל יחסית לתחזוקה. משטח גומי מתאים במיוחד לאזורים סביב מתקני משחק, מתקני כושר ציבוריים ושבילי פעילות שבהם חשוב לשלב בטיחות עם מראה נקי ומזמין.
+            </p>
+          </article>
+
+          <article class="use-card">
+            <h3>משטחי גומי נגד החלקה</h3>
+            <p>
+              במקומות שבהם יש חשש להחלקה, שינויי גובה או תנועה מהירה, בחירה במשטח בעל אחיזה טובה היא חלק חשוב מהתכנון. התאמת החומר והמרקם מסייעת לשפר את תחושת היציבות של המשתמשים.
+            </p>
+          </article>
+
+          <article class="use-card">
+            <h3>מסלולי רקורטן ומתחמי ספורט</h3>
+            <p>
+              במגרשי ספורט, שבילים ומסלולי רקורטן, המשטח נדרש לשלב בלימת זעזועים, רציפות תנועה ועמידות גבוהה. תכנון מדויק של העובי והמרקם מאפשר להתאים את המשטח לסוג הפעילות ולתנאי השטח.
+            </p>
+          </article>
+        </div>
+
+        <div class="image-strip" aria-label="גלריית עבודות">
+          <figure class="image-card">
+            <img src="client-03_08_2025-משטח-גומי-לחצר-גן-ילדים-2.jpg" alt="משטח גומי כחול בחצר גן ילדים עם מתקן משחק" loading="lazy">
+            <figcaption class="image-caption">חצר פעילות צבעונית עם רצפת גומי בטיחותית</figcaption>
+          </figure>
+
+          <figure class="image-card">
+            <img src="משטחי-גומי-from-web-client.jpg" alt="הכנת משטח גומי כחול בחצר חיצונית לפני השלמת העבודה" loading="lazy">
+            <figcaption class="image-caption">יישום משטח גומי בשטח חוץ לפי תוואי המקום</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="standard" aria-labelledby="standard-title">
+      <div class="container">
+        <div class="standards-box">
+          <div>
+            <h2 id="standard-title">עם בטיחות לא משחקים</h2>
+            <p>
+              במגרשי משחקים, גנים ציבוריים וחצרות מוסדות חינוך, רצפת הבטיחות אינה שכבת גימור בלבד. היא חלק מהמערכת שמגנה על המשתמשים, ולכן חשוב לבחור בפתרון שמתוכנן ומיושם בהתאם לדרישות המקצועיות והתקינה הרלוונטית.
+            </p>
+            <div class="standards-badges" aria-label="ערכי ביצוע">
+              <span class="badge">בלימת נפילה</span>
+              <span class="badge">עמידות חוץ</span>
+              <span class="badge">שכבה רציפה</span>
+              <span class="badge">תחזוקה שוטפת</span>
+            </div>
+          </div>
+
+          <div>
+            <p>
+              משטחי גומי יצוק מתאימים במיוחד לאזורים שבהם נדרשת שכבת בלימה רציפה, ללא חיבורים של אריחים וללא תחושה של פתרון זמני. בחירה בשכבה דו-שכבתית, הכוללת בסיס SBR ושכבה עליונה מבוססת EPDM, מאפשרת לשלב בין יציבות, גמישות, עמידות וצבעוניות. כאשר המשטח מותקן על תשתית מתאימה ובמפרט נכון, הוא מספק פתרון שימושי ואסתטי לאורך זמן.
+            </p>
+            <p>
+              פולימור הנדסה מייחסת חשיבות גבוהה להתאמת המשטח לייעוד שלו. יש הבדל בין מתחם משחק לפעוטות, גן ציבורי עם מתקני טיפוס, מגרש ספורט, שביל הליכה או חצר פרטית. בכל אחד מהמקרים נדרשת התייחסות לגובה נפילה אפשרי, צפיפות השימוש, ניקוז, תנאי מזג אוויר, שחיקה, צבעוניות ורמת התחזוקה העתידית.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="design-title">
+      <div class="container">
+        <h2 class="section-title" id="design-title">בטיחות יכולה להיות גם אסתטית</h2>
+        <p class="section-lead">
+          אחד היתרונות הבולטים של משטחי גומי הוא היכולת לחבר בין צורך בטיחותי לבין עיצוב סביבתי. אפשר ליצור משטח חלק ונקי, לשלב צבעים שונים, לתכנן אזורי פעילות מוגדרים, להוסיף צורות משחק ולהתאים את המראה לאופי המקום.
+        </p>
+        <p>
+          בחצרות ילדים ניתן לשלב אלמנטים כמו קלאס, צבעים, אותיות, צורות גאומטריות ודוגמאות משחק. בפארקים ציבוריים ניתן לבחור גוונים רגועים שמשתלבים עם הסביבה, ובמגרשי ספורט או מסלולי רקורטן ניתן להדגיש מסלולים, גבולות ואזורים לפי אופי הפעילות. התוצאה היא לא רק משטח בטיחותי, אלא מרחב שימושי שמזמין תנועה, משחק ושהייה.
+        </p>
+        <p>
+          תכנון כזה דורש הבנה של החומר ושל השטח. צבע יפה לבדו אינו מספיק, וגם משטח עבה לבדו אינו מבטיח תוצאה טובה. החוכמה היא לחבר בין מפרט נכון, יישום מוקפד, גימור נקי ותכנון שמתאים למשתמשים. זו בדיוק הנקודה שבה ניסיון של חברה מקצועית כמו פולימור הנדסה הופך ליתרון משמעותי.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="section-title" id="faq-title">שאלות ותשובות על משטחי גומי</h2>
+
+        <div class="faq">
+          <details>
+            <summary>למה חשוב לבחור משטח גומי תקני?</summary>
+            <p>
+              משטח גומי באזורי משחק ופעילות נועד לסייע בבלימת נפילות ובהפחתת סיכונים. כאשר המשטח מתוכנן לפי השימוש בשטח ומיושם במפרט מתאים, הוא מספק שכבת הגנה משמעותית יותר ממשטח קשיח רגיל.
+            </p>
+          </details>
+
+          <details>
+            <summary>האם משטח גומי מתאים גם לשטחי חוץ?</summary>
+            <p>
+              כן. משטחי גומי איכותיים מתאימים לשטחי חוץ כמו גני ילדים, פארקים, חצרות, מתקני כושר ושבילי פעילות. חשוב לבחור בחומרים עמידים ובביצוע מקצועי שמתאים לתנאי האקלים ולשימוש היומיומי.
+            </p>
+          </details>
+
+          <details>
+            <summary>מה ההבדל בין משטח רגיל למסלול רקורטן?</summary>
+            <p>
+              מסלול רקורטן מיועד בדרך כלל לפעילות ספורטיבית, הליכה, ריצה או מתחמי פעילות שבהם יש משמעות לנוחות דריכה, בלימת זעזועים ורציפות תנועה. המפרט נקבע לפי אופי הפעילות והשטח.
+            </p>
+          </details>
+
+          <details>
+            <summary>האם אפשר לבחור צבעים ודוגמאות?</summary>
+            <p>
+              כן. ניתן לתכנן צבעים, צורות, חלוקת אזורים ודוגמאות שונות לפי הצורך. בגני ילדים ובבתי ספר אפשר לשלב משחקים ואלמנטים צבעוניים, ובמרחבים ציבוריים אפשר לבחור מראה נקי וקלאסי יותר.
+            </p>
+          </details>
+
+          <details>
+            <summary>מה משפיע על אורך החיים של המשטח?</summary>
+            <p>
+              איכות התשתית, סוג החומרים, עובי השכבות, איכות היישום, החשיפה לשמש ולגשם ורמת התחזוקה השוטפת משפיעים כולם על עמידות המשטח לאורך זמן.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="footer-grid">
+      <section aria-labelledby="footer-about-title">
+        <h2 id="footer-about-title">פולימור הנדסה</h2>
+        <p>
+          חברה ותיקה ומנוסה בתכנון, התקנה ותחזוקה של רצפות בטיחות ומשטחי גומי למרחבים ציבוריים, מוסדות, פארקים, בתי ספר, גני ילדים ומגרשי ספורט.
+        </p>
+      </section>
+
+      <section aria-labelledby="footer-contact-title">
+        <h3 id="footer-contact-title">יצירת קשר</h3>
+        <p>כתובת: ג'מילי 4, פתח תקווה</p>
+        <a class="footer-phone" href="tel:0546813878" title="חיוג לפולימור הנדסה">054-6813878</a>
+      </section>
+
+      <section aria-labelledby="footer-links-title">
+        <h3 id="footer-links-title">קישורים שימושיים</h3>
+        <ul>
+          <li><a href="#about" title="מעבר לאודות החברה">אודות החברה</a></li>
+          <li><a href="#applications" title="מעבר לשימושים של משטחי גומי">שימושים נפוצים</a></li>
+          <li><a href="#faq" title="מעבר לשאלות ותשובות">שאלות ותשובות</a></li>
+          <li><a href="https://www.facebook.com/Polimor.engineering" title="מעבר לעמוד הפייסבוק של פולימור הנדסה">פייסבוק פולימור הנדסה</a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="footer-service-title">
+        <h3 id="footer-service-title">תחומי ביצוע</h3>
+        <ul>
+          <li>משטחי גומי לגני ילדים</li>
+          <li>משטחי בטיחות לפארקים</li>
+          <li>רצפות גומי למגרשי ספורט</li>
+          <li>מסלולי רקורטן ושבילי פעילות</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="privacy">
+      <p>
+        אנו מכבדים את פרטיות המשתמשים באתר זה. דף הנחיתה אינו כולל טפסי השארת פרטים ואינו אוסף מידע אישי באופן ישיר. ייתכן ונעשה שימוש בכלי סטטיסטיקה וניתוח תנועה (כגון cookies) לצורך שיפור חוויית המשתמש.
+      </p>
+      <p>
+        האתר מאוחסן ומופעל באמצעות פלטפורמת github, וייתכן כי נתונים טכניים נאספים בהתאם למדיניות הפלטפורמה. ניתן לעיין במדיניות הפרטיות של github בקישור הבא:
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" title="מעבר למדיניות הפרטיות של GitHub">מדיניות הפרטיות של GitHub</a>.
+      </p>
+      <p>
+        <a title="נבנה על ידי פרוסייטס" class="" href="https://prosites.co.il/">נבנה על ידי פרוסייטס</a>
+      </p>
+    </div>
+
+    <p class="accessibility-note">
+      נבנה עם היררכיית כותרות, קישורי עוגן, ALT לתמונות, TITLE לקישורים, גודל טקסט מינימלי של 18px וניגודיות משופרת לצורך נגישות.
+    </p>
+  </footer>
+
+  <div class="floating-actions" aria-label="כפתורי יצירת קשר צפים">
+    <a class="float-btn" href="tel:0546813878" title="חיוג מהיר לפולימור הנדסה" aria-label="חיוג מהיר לפולימור הנדסה">☎</a>
+    <a class="float-btn secondary" href="#contact" title="מעבר לפרטי יצירת קשר" aria-label="מעבר לפרטי יצירת קשר">↧</a>
+  </div>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.main-nav');
+
+    burger.addEventListener('click', function () {
+      const isOpen = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('.main-nav a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
